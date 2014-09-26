@@ -23,15 +23,15 @@
   <!-- get every artifact through maven.glassfish.org, which proxies all the artifacts that we need -->
   <repositories>
     <repository>
-      <id>m.g.o-public</id>
-      <url>https://maven.glassfish.org/content/groups/public/</url>
+      <id>m.j.ci-public</id>
+      <url>http://maven.jenkins-ci.org/content/repositories/releases/</url>
     </repository>
   </repositories>
 
   <pluginRepositories>
     <pluginRepository>
-      <id>m.g.o-public</id>
-      <url>https://maven.glassfish.org/content/groups/public/</url>
+      <id>m.j.ci-public</id>
+      <url>http://maven.jenkins-ci.org/content/repositories/releases/</url>
     </pluginRepository>
   </pluginRepositories>
   <dependencies>
@@ -63,4 +63,13 @@
             <version>${jersey.version}</version>
         </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.jvnet.hudson.tools</groupId>
+        <artifactId>maven-hpi-plugin</artifactId>
+        <version>3.0.1</version>
+      </plugin>
+    </plugins>
+  </build>
 </project>

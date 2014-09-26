@@ -19,8 +19,6 @@
    <jersey.version>1.12</jersey.version>
  </properties>
 
-
-  <!-- get every artifact through maven.glassfish.org, which proxies all the artifacts that we need -->
   <repositories>
     <repository>
       <id>m.j.ci-public</id>
